@@ -1,6 +1,6 @@
 {
   "name": "ape-tasking",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ape framework module for managins tasks",
   "main": "lib",
   "scripts": {
