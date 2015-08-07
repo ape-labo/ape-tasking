@@ -8,7 +8,7 @@
 
 var path = require('path'),
     apeTasking = require('../lib'),
-    apeCovering = require('ap-covering');
+    apeCovering = require('ape-covering');
 
 var basedir = path.resolve(__dirname, '..');
 process.chdir(basedir);
