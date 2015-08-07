@@ -8,14 +8,14 @@
 "use strict";
 
 var path = require('path'),
-    apTasking = require('../lib'),
+    apeTasking = require('../lib'),
     apeReleasing = require('ape-releasing');
 
 var basedir = path.resolve(__dirname, '..');
 process.chdir(basedir);
 
 
-apTasking.runTasks('release', [
+apeTasking.runTasks('release', [
     function (callback) {
         apeReleasing.releasePackage({}, callback);
     }

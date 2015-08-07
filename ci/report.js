@@ -7,13 +7,13 @@
 "use strict";
 
 var path = require('path'),
-    apTasking = require('../lib'),
+    apeTasking = require('../lib'),
     apeReporting = require('ape-reporting');
 
 var basedir = path.resolve(__dirname, '..');
 process.chdir(basedir);
 
-apTasking.runTasks('report', [
+apeTasking.runTasks('report', [
     function (callback) {
         apeReporting.sendToCodeclimate(basedir + '/coverage/lcov.info', callback);
     }
