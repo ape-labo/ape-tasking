@@ -1,17 +1,18 @@
 #!/usr/bin/env node
 
+/**
+ * Run tests.
+ */
+
 "use strict";
 
-var path = require('path'),
-    apeTesting = require('ape-testing'),
-    apeTasking = require('../lib');
+process.chdir(__dirname + '/..');
 
-var basedir = path.resolve(__dirname, '..');
-
-process.chdir(basedir);
+var apeTasking = require('../lib'),
+    apeTesting = require('ape-testing');
 
 apeTasking.runTasks('test', [
-    function (callback) {
+    function runNodeunit(callback) {
         apeTesting.runNodeunit('test/*_test.js', callback);
     }
 ], true);

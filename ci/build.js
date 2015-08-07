@@ -1,21 +1,18 @@
 #!/usr/bin/env node
 
 /**
- * Run build
+ * Build this project.
  */
 
 "use strict";
 
+process.chdir(__dirname + '/..');
 
-var path = require('path'),
-    apeTasking = require('../lib'),
+var apeTasking = require('../lib'),
     coz = require('coz');
 
-var basedir = path.resolve(__dirname, '..');
-process.chdir(basedir);
-
 apeTasking.runTasks('build', [
-    function (callback) {
+    function renderBud(callback) {
         coz.render([
             '.*.bud',
             'lib/.*.bud',
@@ -23,4 +20,3 @@ apeTasking.runTasks('build', [
         ], callback);
     }
 ], true);
-
