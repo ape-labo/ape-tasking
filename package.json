@@ -1,6 +1,6 @@
 {
   "name": "ape-tasking",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Tasking module of ape framework.",
   "main": "lib",
   "scripts": {
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/ape-repo/ape-tasking#readme",
   "dependencies": {
+    "ape-releasing": "^1.0.9",
     "argx": "^1.1.5",
     "async": "^1.4.0",
     "colorprint": "^1.1.1",

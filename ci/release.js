@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 /**
  * Release this package.
  */
@@ -14,9 +13,13 @@ var path = require('path'),
 var basedir = path.resolve(__dirname, '..');
 process.chdir(basedir);
 
-
 apeTasking.runTasks('release', [
     function (callback) {
-        apeReleasing.releasePackage({}, callback);
+        apeReleasing.releasePackage({
+            beforeRelease: [
+                './ci/build.js',
+                './ci/test.js'
+            ]
+        }, callback);
     }
 ], true);
