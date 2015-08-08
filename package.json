@@ -1,6 +1,6 @@
 {
   "name": "ape-tasking",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "ape framework module for managins tasks",
   "main": "lib",
   "scripts": {
@@ -28,17 +28,18 @@
   "homepage": "https://github.com/ape-repo/ape-tasking#readme",
   "dependencies": {
     "argx": "^1.1.5",
-    "async": "^1.4.0",
+    "async": "^1.4.1",
     "colorprint": "^1.1.1",
     "glob": "^5.0.14",
     "stringcase": "^1.0.8"
   },
   "devDependencies": {
-    "ape-covering": "^1.0.5",
-    "ape-releasing": "^1.0.12",
-    "ape-reporting": "^1.0.3",
-    "ape-testing": "^1.1.4",
+    "ape-covering": "^1.0.8",
+    "ape-releasing": "^1.0.14",
+    "ape-reporting": "^1.0.7",
+    "ape-testing": "^1.1.6",
     "ape-tmpl": "^1.0.1",
+    "ape-updating": "^1.0.1",
     "coz": "^1.5.0",
     "injectmock": "^1.0.4"
   }
