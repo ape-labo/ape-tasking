@@ -8,11 +8,11 @@
 
 process.chdir(__dirname + '/..');
 
-var apeTasking = require('../lib'),
+const apeTasking = require('../lib'),
     coz = require('coz');
 
 apeTasking.runTasks('build', [
-    function renderBud(callback) {
+    (callback) => {
         coz.render([
             '.*.bud',
             'lib/.*.bud',

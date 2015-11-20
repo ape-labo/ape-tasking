@@ -8,11 +8,11 @@
 
 process.chdir(__dirname + '/..');
 
-var apeTasking = require('../lib'),
+const apeTasking = require('../lib'),
     apeUpdating = require('ape-updating');
 
 apeTasking.runTasks('update', [
-    function renderBud(callback) {
+    (callback) => {
         apeUpdating.updateDependencies({}, callback);
     }
 ], true);

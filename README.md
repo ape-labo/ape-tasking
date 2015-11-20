@@ -43,9 +43,9 @@ ape framework module for managins tasks
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
 
-<a name="section-docs-readme-02-usage-md"></a>
+<a name="section-doc-readme-02-usage-md"></a>
 Usage
 ----
 
@@ -56,11 +56,13 @@ Usage
 ```javascript
 #!/usr/bin/env node
 
-var apeTasking = require('ape-tasking');
+"use strict";
+
+const apeTasking = require('ape-tasking');
 
 // Run tasks
 apeTasking.runTasks('myCustomTask', [
-    function (callback) {
+    (callback) => {
         /*...*/
         callback(null); //Pass error if failed.
     }
@@ -68,7 +70,7 @@ apeTasking.runTasks('myCustomTask', [
 
 ```
 
-<!-- Section from "docs/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
 
 
 <!-- Sections Start -->

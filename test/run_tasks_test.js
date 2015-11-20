@@ -1,32 +1,42 @@
 /**
  * Test case for runTasks.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var runTasks = require('../lib/run_tasks.js'),
-    injectmock = require('injectmock');
+const runTasks = require('../lib/run_tasks.js'),
+    injectmock = require('injectmock'),
+    assert = require('assert');
 
-exports.tearDown = function (done) {
-    injectmock.restoreAll();
-    done();
-};
+describe('run-tasks', () => {
 
-exports['Run tasks'] = function (test) {
-    runTasks('Test task', [], false, function (err) {
-        test.ifError(err);
-        test.done();
+    before((done) => {
+        done();
     });
-};
 
-exports['Run tasks with error'] = function (test) {
-    injectmock(console, 'error', injectmock.noop);
-    runTasks('Test task to fail', [
-        function (callback) {
-            callback(new Error('something wrong!'));
-        }
-    ], false, function (err) {
-        test.ok(!!err);
-        test.done();
+    after((done) => {
+        injectmock.restoreAll();
+        done();
     });
-};
+
+
+    it('Run tasks', (done) => {
+        runTasks('Test task', [], false, function (err) {
+            assert.ifError(err);
+            done();
+        });
+    });
+
+    it('Run tasks with error', (done) => {
+        injectmock(console, 'error', injectmock.noop);
+        runTasks('Test task to fail', [
+            function (callback) {
+                callback(new Error('something wrong!'));
+            }
+        ], false, function (err) {
+            assert.ok(!!err);
+            done();
+        });
+    });
+});
 

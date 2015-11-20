@@ -8,11 +8,11 @@
 
 process.chdir(__dirname + '/..');
 
-var apeTasking = require('../lib'),
+const apeTasking = require('../lib'),
     apeCovering = require('ape-covering');
 
 apeTasking.runTasks('cover', [
-    function measureCoverage(callback) {
+    (callback) => {
         apeCovering.measureCoverage('ci/test.js', [], {
             dir: 'coverage'
         }, callback);
