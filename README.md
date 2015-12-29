@@ -43,9 +43,9 @@ ape framework module for managins tasks
 <!-- Sections Start -->
 <a name="sections"></a>
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" Start -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
-<a name="section-doc-readme-02-usage-md"></a>
+<a name="section-doc-guides-02-usage-md"></a>
 Usage
 ----
 
@@ -70,7 +70,7 @@ apeTasking.runTasks('myCustomTask', [
 
 ```
 
-<!-- Section from "doc/readme/02.Usage.md.hbs" End -->
+<!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
 
 <!-- Sections Start -->
