@@ -4,15 +4,15 @@
  * Run tests.
  */
 
-"use strict";
+'use strict'
 
-process.chdir(__dirname + '/..');
+process.chdir(`${__dirname}/..`)
 
-const apeTasking = require('../lib'),
-    apeTesting = require('ape-testing');
+const apeTasking = require('../lib')
+const apeTesting = require('ape-testing')
 
 apeTasking.runTasks('test', [
-    (callback) => {
-        apeTesting.runMocha('test/*_test.js', callback);
-    }
-], true);
+  (callback) => {
+    apeTesting.runMocha('test/*_test.js', callback)
+  }
+], true)

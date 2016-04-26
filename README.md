@@ -58,23 +58,23 @@ Usage
 ```javascript
 #!/usr/bin/env node
 
-"use strict";
+'use strict'
 
-const apeTasking = require('ape-tasking');
+const apeTasking = require('ape-tasking')
 
 // Run tasks
 apeTasking.runTasks('myCustomTask', [
   // Run callback base task
   (callback) => {
     /* ... */
-    callback(null) //Pass error if failed.
+    callback(null) // Pass error if failed.
   },
   // Run promise base task
   () => new Promise((resolve, reject) => {
     /* ... */
     resolve()
   })
-], true);
+], true)
 
 ```
 
