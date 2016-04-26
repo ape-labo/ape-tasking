@@ -6,8 +6,14 @@ const apeTasking = require('ape-tasking');
 
 // Run tasks
 apeTasking.runTasks('myCustomTask', [
-    (callback) => {
-        /*...*/
-        callback(null); //Pass error if failed.
-    }
+  // Run callback base task
+  (callback) => {
+    /* ... */
+    callback(null) //Pass error if failed.
+  },
+  // Run promise base task
+  () => new Promise((resolve, reject) => {
+    /* ... */
+    resolve()
+  })
 ], true);

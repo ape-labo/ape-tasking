@@ -4,25 +4,16 @@
  */
 "use strict";
 
-const execcli = require('../lib/execcli.js'),
-    assert = require('assert');
+const execcli = require('../lib/execcli.js');
+const assert = require('assert');
 
 describe('execcli', () => {
+  it('Execcli', (done) => {
+    execcli('ls', [ '.' ], (err) => {
+      assert.ifError(err)
+      done()
+    })
+  })
+})
 
-    before((done) => {
-        done();
-    });
-
-    after((done) => {
-        done();
-    });
-
-
-    it('Execcli', (done) => {
-        execcli('ls', ['.'], (err) => {
-            assert.ifError(err);
-            done();
-        });
-    });
-});
-
+/* global describe, it */
