@@ -12,7 +12,5 @@ const apeTasking = require('../lib')
 const apeUpdating = require('ape-updating')
 
 apeTasking.runTasks('update', [
-  (callback) => {
-    apeUpdating.updateDependencies({}, callback)
-  }
+  () => apeUpdating.updateDependencies({})
 ], true)

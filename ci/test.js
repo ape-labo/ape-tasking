@@ -12,7 +12,5 @@ const apeTasking = require('../lib')
 const apeTesting = require('ape-testing')
 
 apeTasking.runTasks('test', [
-  (callback) => {
-    apeTesting.runMocha('test/*_test.js', callback)
-  }
+  () => apeTesting.runMocha('test/*_test.js', {})
 ], true)
