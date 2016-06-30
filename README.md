@@ -102,6 +102,8 @@ This software is released under the [MIT License](https://github.com/ape-repo/ap
 Links
 ------
 
-+ [ape-repo](https://github.com/ape-repo)
++ [ape-repo][ape_repo_url]
+
+[ape_repo_url]: https://github.com/ape-repo
 
 <!-- Links End -->
