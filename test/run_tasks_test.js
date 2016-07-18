@@ -20,7 +20,9 @@ describe('run-tasks', () => {
 
   it('Run tasks', (done) => {
     runTasks('Test task', [], false).then(() => {
-      done()
+      runTasks.rerun().then(() => {
+        done()
+      })
     })
   })
 
