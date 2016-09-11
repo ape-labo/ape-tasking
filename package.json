@@ -1,6 +1,6 @@
 {
   "name": "ape-tasking",
-  "version": "4.0.9",
+  "version": "4.0.10",
   "description": "ape framework module for tasks",
   "main": "shim/node",
   "scripts": {
