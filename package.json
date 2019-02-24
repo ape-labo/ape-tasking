@@ -1,8 +1,8 @@
 {
   "name": "ape-tasking",
-  "version": "4.0.11",
+  "version": "4.0.12",
   "description": "ape framework module for tasks",
-  "main": "shim/node",
+  "main": "lib",
   "scripts": {
     "test": "node ./ci/test.js",
     "prepublish": "node ./ci/build.js && node ./ci/shim.js"
@@ -34,7 +34,7 @@
     "ape-reporting": "^3.0.1",
     "ape-tmpl": "^6.0.12",
     "ape-updating": "^5.0.1",
-    "coz": "^7.0.8",
+    "coz": "^7.0.9",
     "injectmock": "^2.0.0"
   },
   "engines": {
